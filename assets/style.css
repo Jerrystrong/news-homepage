@@ -1,0 +1,210 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: var(--color-ff-white);
+    font-family: 'Inter',sans-serif;
+}
+*:root{
+    /* colors */
+    --color-Soft-orange:hsl(35, 77%, 62%);
+    --color-Soft-red: hsl(5, 85%, 63%);
+    /* neutral */
+    --color-ff-white: hsl(36, 100%, 99%);
+    --color-Grayish-blue: hsl(233, 8%, 79%);
+    --color-Dark-grayish-blue: hsl(236, 13%, 42%);
+    --color-Very-dark-blue: hsl(240, 100%, 5%);
+}
+p{
+    font-size: 15px;
+    color:var(--color-Grayish-blue);
+}
+.container{
+    width:80%;
+    margin:50px auto;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    display:flex;
+    gap:10px;
+    font-size: 15px;
+    
+}
+ul li a{
+    cursor: pointer;
+    color:var(--color-Grayish-blue);
+    text-decoration:none;
+    transition:all .4s ease; 
+}
+/* hover effect */
+ul li a:hover{
+    color:var(--color-Soft-red);
+    transition:hover .4s ease;
+}
+.menu-open, .menu-close{
+    display: none;
+}
+.section-one{
+    display:grid;
+    grid-template-columns:1fr 350px;
+    gap:20px;
+    overflow: hidden;
+}
+
+.left-article .image-large{
+    display: block;
+    width:100%;
+    height: 50%;
+    background-image: url(../assets/images/image-web-3-desktop.jpg);
+    background-position: 100% 100%;
+    background-size: 100% 100%;
+}
+.right-place{
+    background-color: var(--color-Very-dark-blue);
+    padding:20px;
+    display: grid;
+    height:85%;
+}
+.text-bar{
+    border-bottom: 1px solid var(--color-Grayish-blue);
+}
+.right-place h2{
+    color:var(--color-Soft-orange);
+    margin:0;
+}
+.right-place div h3{
+    color:var(--color-ff-white);
+    cursor:pointer;
+}
+.right-place div h3:hover{
+    color: var(--color-Soft-orange);
+}
+.right-place div p{
+    font-size: 15px;
+}
+.left-place-bottom{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    /* padding:30px; */
+    /* background-color: black; */
+}
+.left-place-bottom h2{
+    font-size: 42px;
+}
+.left-mess{
+    display: grid;
+}
+.btn-read-more{
+    background-color:var(--color-Soft-red);
+    color:var(--color-ff-white);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    padding:10px 30px;
+    cursor:pointer;
+    transition:all .4s ease-out;
+}
+/* hover effect button */
+.btn-read-more:hover{
+    background-color: var(--color-Very-dark-blue);
+    transition:all .4s ease-out;
+}
+.left-place-bottom{
+    color:var(--color-Very-dark-blue);
+}
+
+/* section two */
+.right-article{
+    display:flex;
+    justify-content: center;
+    gap:30px;
+}
+.gaming-place{
+    display: grid;
+    grid-template-columns:100px 1fr;
+    gap:20px;
+}
+.gaming-place span{
+    color:var(--color-Grayish-blue);
+    font-weight: 700;
+}
+.gaming-place h3{
+    cursor:pointer;
+}
+/* hover effect title h3 */
+.gaming-place h3:hover{
+    color:var(--color-Soft-red);
+}
+
+@media screen and (max-width:375px) {
+    /* nav  */
+    /* ul{
+        list-style: none;
+        display:flex;
+        gap:10px;
+        display: none;
+    } */
+    .nav{
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap:30px;
+        position:absolute;
+        width:200px;
+        height: 100vh;
+        background-color: white;
+        color:var(--color-Dark-grayish-blue);
+        top:-15px;
+        right:0px;
+        display: none;
+        
+    }
+    .openNav{
+        display:flex;
+        flex-direction: column;
+    }
+    .menu-open{
+        display:block;
+        cursor:pointer;
+    }
+    .menu-close{
+        display:block;
+        align-self: flex-end;
+        margin: 30px 0px 0px 150px;
+        cursor:pointer;
+    }
+    .container{
+        width:90%;
+    }
+    .left-article .image-large{
+        display: block;
+        width:100%;
+        height: 50%;
+        background-image: url(../assets/images/image-web-3-mobile.jpg);
+        background-position: 100% 100%;
+        background-size: 100% 100%;
+    }
+    .section-one{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:220px;
+    }
+    .left-place-bottom{
+        grid-template-columns: 1fr;
+    }
+    .left-place-bottom h2{
+        margin: 10px 0px 0px 0px;
+    }
+    .right-article{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+}
